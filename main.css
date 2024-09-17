@@ -1,0 +1,19 @@
+body{
+    background-color: rgb(195, 150, 195);
+    color:rgb(55, 20, 89);
+}
+#listBox{
+    background-color: antiquewhite;
+    padding: 10px;
+    width: 500px;
+    height: 400px;
+    color:rgb(55, 20, 89);
+}
+button{
+    cursor: pointer;
+    color: rgb(55, 20, 89);
+    background-color: antiquewhite; 
+}
+#addText{
+    padding: 10px;
+}
