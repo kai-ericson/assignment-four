@@ -1,19 +1,62 @@
+
 body{
     background-color: rgb(195, 150, 195);
     color:rgb(55, 20, 89);
 }
-#listBox{
-    background-color: antiquewhite;
-    padding: 10px;
+/*#listBox{
+    padding: 10px 10px 10px;
+    background: antiquewhite;
     width: 500px;
     height: 400px;
     color:rgb(55, 20, 89);
+    border: 3px solid rgb(55, 20, 89);
+}*/
+div{
+    background: antiquewhite;
+    padding: 3px;
 }
+ul{
+    margin: 5px;
+    padding: 15px;
+    
+}
+ul li{
+   /* background: antiquewhite;*/
+    cursor: pointer;
+    position: relative;
+   
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+ul li:hover{
+    background: rgb(195, 150, 195);
+}
+.completed{
+    background:antiquewhite;
+    color: rgb(55, 20, 89);
+    text-decoration: line-through;
+}
+h1{
+    background-color:rgb(195, 150, 195);
+    padding: 30px 40px;
+}
+
 button{
     cursor: pointer;
     color: rgb(55, 20, 89);
     background-color: antiquewhite; 
+    padding: 1px;
+    text-align: middle;
+    font-size: 14px;
+    border-radius: 0;
+    height: 25px;
+    width: 50px;
 }
 #addText{
-    padding: 10px;
+    padding: 20px;
+    float: left;
 }
