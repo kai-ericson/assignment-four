@@ -1,25 +1,39 @@
-let list = [];
+const todoList = document.querySelector("#todoList");
+const addBtn=document.querySelector("#addBtn");
+const input=document.querySelector("#listItem");
+let completedCount = 0;
+const todoArray=[];
+addBtn.addEventListener("click",addToList);
+
 
 function addToList(){
-    let item = document.querySelector("#listItem").value;
-    //console.log(item);
-    list.push(item);
+    console.log("button pressed!");
+    const text=input.value;
     
-    fillList(list);
-    
-    for(let i of list){
-        console.log(i);
-    }
-    
-};
+    if(text !== ""){
+        todoArray.push(text);
+        const item = document.createElement("li");
+        todoList.appendChild(item);
 
-function fillList(list){
-    let i = list.length-1;
-    let ul=document.createElement("ul");
-    //for(let i of list){
-        let li = document.createElement("li");
-        li.innerHTML = list[i];
-        ul.appendChild(li);
-        document.getElementById("todoList").appendChild(ul);
-   // }
-}
+        const itemLabel=document.createElement("span");
+        itemLabel.innerText=text;
+        item.appendChild(itemLabel);
+
+        itemLabel.addEventListener("click",
+            function(){
+                console.log("clicked on text");
+                item.setAttribute("class", "completed");
+                completedCount++;
+                console.log(completedCount);
+                document.querySelector("#nbrFinishedTasks").innerHTML = "Number of finished tasks: "+completedCount;
+            }
+        );
+
+        input.value="";
+        document.querySelector("#warningText").innerHTML = " ";
+        document.querySelector("#nbrTasks").innerHTML ="Number of tasks: "+ todoArray.length;
+        
+    }else{
+        document.querySelector("#warningText").innerHTML="You need to write something first!";
+    }
+};
